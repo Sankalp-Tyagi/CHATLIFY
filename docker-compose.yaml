@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: C:\Users\anura\OneDrive\Desktop\CBESCHAT\server
+    ports:
+      - "5000:5000"
+    networks:
+      - chat_network
+
+  frontend:
+    build: C:\Users\anura\OneDrive\Desktop\CBESCHAT\client
+    ports:
+      - "5173:5173"
+    networks:
+      - chat_network
+
+networks:
+  chat_network:
+    driver: bridge
+
